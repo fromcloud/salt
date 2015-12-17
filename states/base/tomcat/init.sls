@@ -107,3 +107,11 @@ tomcat-webapps:
     - user: tomcat
     - group: tomcat
     - mode: 664
+
+/usr/share/tomcat/webapps/examples/jsp/play_from_cdn.html:
+  file:
+    - managed
+    - source: salt://tomcat/play_from_cdn.html
+    - user: tomcat
+    - group: tomcat
+    - mode: 664
