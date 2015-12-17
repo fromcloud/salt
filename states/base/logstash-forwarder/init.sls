@@ -16,7 +16,7 @@ logstash-forwarder:
       - file: /etc/pki/tls/certs/logstash-forwarder.crt
 
 
-/etc/logstash-forwarder.conf
+/etc/logstash-forwarder.conf:
   file:
     - managed
     - source: salt://logstash-forwarder/logstash-forwarder.conf
@@ -24,7 +24,7 @@ logstash-forwarder:
     - group: root
     - mode: 664
 
-/etc/pki/tls/certs/logstash-forwarder.crt
+/etc/pki/tls/certs/logstash-forwarder.crt:
   file:
     - managed
     - source: /etc/pki/tls/certs/logstash-forwarder.crt
