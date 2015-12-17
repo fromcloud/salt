@@ -75,7 +75,7 @@ tomcat-webapps:
     - group: tomcat
     - mode: 664
 
-/etc/tomcat/web.xml:
+/var/lib/tomcat/webapps/examples/WEB-INF/web.xml:
   file:
     - managed
     - source: salt://tomcat/web.xml
