@@ -14,7 +14,6 @@ logstash-forwarder:
     - watch:
       - pkg: logstash-forwarder
       - file: /etc/logstash-forwarder.conf 
-      - file: /etc/pki/tls/certs/logstash-forwarder.crt
 
 /etc/logstash-forwarder.conf:
   file:
