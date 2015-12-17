@@ -1,9 +1,5 @@
 base:
-  'hsw-linux003.cs32f7cloud.internal':
-    - nginx
-  'hsw-tomcat001.cs32f7cloud.internal':
+  'tomcat-01':
     - tomcat
-  'hsw-tomcat002.cs32f7cloud.internal':
-    - tomcat
-  'hsw-tomcat003.cs32f7cloud.internal':
+  'tomcat-02':
     - tomcat
