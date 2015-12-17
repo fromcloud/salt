@@ -24,8 +24,7 @@ logstash-forwarder:
     - mode: 664
 
 /etc/pki/tls/certs/logstash-forwarder.crt:
-  file:
-    - copy
+  file.copy:
     - source: /etc/pki/tls/certs/logstash-forwarder.crt
     - user: root
     - group: root
