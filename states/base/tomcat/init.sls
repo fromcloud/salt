@@ -28,6 +28,7 @@ tomcat:
       - file: /etc/tomcat/server.xml
       - file: /etc/tomcat/web.xml
       - file: /etc/tomcat/tomcat-users.xml
+      - file: /var/lib/tomcat/webapps/examples/WEB-INF/web.xml
 
 tomcat-admin-webapps:
   pkg:
