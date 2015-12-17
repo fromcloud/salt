@@ -15,7 +15,6 @@ logstash-forwarder:
       - pkg: logstash-forwarder
       - file: /etc/logstash-forwarder.conf 
       - file: /etc/pki/tls/certs/logstash-forwarder.crt
-      - file: /etc/yum.repos.d/logstash-forwarder.repo
 
 /etc/logstash-forwarder.conf:
   file:
@@ -27,7 +26,7 @@ logstash-forwarder:
 
 /etc/pki/tls/certs/logstash-forwarder.crt:
   file:
-    - managed
+    - copy
     - source: /etc/pki/tls/certs/logstash-forwarder.crt
     - user: root
     - group: root
