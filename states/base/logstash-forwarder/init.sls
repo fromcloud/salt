@@ -1,6 +1,6 @@
 pkgrepo.managed:
     - name: logstash-forwarder repository
-    - mirrorlist: http://packages.elastic.co/logstashforwarder/centos
+    - baseurl: http://packages.elastic.co/logstashforwarder/centos
     - gpgkey: http://packages.elasticsearch.org/GPG-KEY-elasticsearch
     - gpgcheck: 1
 
