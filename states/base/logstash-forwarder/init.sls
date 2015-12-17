@@ -6,15 +6,6 @@
     - group: root
     - mode: 664
 
-logstash-forwarder:
-  pkg:
-    - installed
-  service.running:
-    - enable: True
-    - watch:
-      - pkg: logstash-forwarder
-      - file: /etc/logstash-forwarder.conf 
-
 /etc/logstash-forwarder.conf:
   file:
     - managed
@@ -30,3 +21,12 @@ logstash-forwarder:
     - user: root
     - group: root
     - mode: 664
+
+logstash-forwarder:
+  pkg:
+    - installed
+  service.running:
+    - enable: True
+    - watch:
+      - pkg: logstash-forwarder
+      - file: /etc/logstash-forwarder.conf 
