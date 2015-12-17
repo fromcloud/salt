@@ -1,9 +1,3 @@
-pkgrepo.managed:
-  - name: logstash-forwarder repository
-  - baseurl: http://packages.elastic.co/logstashforwarder/centos
-  - gpgkey: http://packages.elasticsearch.org/GPG-KEY-elasticsearch
-  - gpgcheck: 1
-
 logstash-forwarder:
   pkg:
     - installed
@@ -13,6 +7,7 @@ logstash-forwarder:
       - pkg: logstash-forwarder
       - file: /etc/logstash-forwarder.conf 
       - file: /etc/pki/tls/certs/logstash-forwarder.crt
+      - file: /etc/yum.repos.d/logstash-forwarder.repo
 
 
 /etc/logstash-forwarder.conf:
@@ -27,6 +22,14 @@ logstash-forwarder:
   file:
     - managed
     - source: /etc/pki/tls/certs/logstash-forwarder.crt
+    - user: root
+    - group: root
+    - mode: 664
+
+/etc/yum.repos.d/logstash-forwarder.repo
+  file:
+    - managed
+    - source: salt://logstash-forwarder/logstash-forwarder.repo
     - user: root
     - group: root
     - mode: 664
