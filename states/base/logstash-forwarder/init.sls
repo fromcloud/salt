@@ -26,7 +26,7 @@ logstash-forwarder:
     - group: root
     - mode: 664
 
-/etc/yum.repos.d/logstash-forwarder.repo
+/etc/yum.repos.d/logstash-forwarder.repo:
   file:
     - managed
     - source: salt://logstash-forwarder/logstash-forwarder.repo
