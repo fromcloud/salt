@@ -5,7 +5,7 @@ munin-node:
     - enable: True
     - watch:
       - pkg: logstash-forwarder
-      - file: /etc/munin-node/munin-node.conf 
+      - file: /etc/munin/munin-node.conf 
 
 
 /etc/munin-node.conf:
