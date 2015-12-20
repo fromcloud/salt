@@ -8,7 +8,7 @@ munin-node:
       - file: /etc/munin/munin-node.conf 
 
 
-/etc/munin-node.conf:
+/etc/munin/munin-node.conf:
   file:
     - managed
     - source: salt://munin-node/munin-node.conf
